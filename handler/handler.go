@@ -19,7 +19,7 @@ var client *twitter.Client
 
 func init() {
 	config := &clientcredentials.Config{
-		ClientID:     os.Getenv("clientID")
+		ClientID:     os.Getenv("clientID"),
 		ClientSecret: os.Getenv("clientSecret"),
 		TokenURL:     "https://api.twitter.com/oauth2/token",
 	}
