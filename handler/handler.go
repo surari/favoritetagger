@@ -27,9 +27,10 @@ func init() {
 	client = twitter.NewClient(httpClient)
 }
 
-func favorite(c echo.Context) error {
+// Favorite is get twitter favorite list
+func Favorite(c echo.Context) error {
 	params := &twitter.FavoriteListParams{
-		ScreenName: c.QueryParam("screen_name")
+		ScreenName: c.QueryParam("screen_name"),
 	}
 	// get favorites list
 	tweet, resp, err := client.Favorites.List(params)
